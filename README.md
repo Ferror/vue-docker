@@ -1,10 +1,11 @@
 # vue docker image
 
 ## Example
+### docker-compose.yml
 ```
 services:
     traefik:
-        image: "traefik:2.3"
+        image: traefik:2.3
         container_name: "traefik"
         command:
             - "--log.level=DEBUG"
@@ -23,8 +24,7 @@ services:
 
     vue:
         container_name: "vue"
-        build:
-            context: ./
+        image: ferror/vue-image
         command: ["make", "run"]
         labels:
             - "traefik.enable=true"
@@ -42,5 +42,16 @@ networks:
             driver: default
             config:
                 - subnet: 192.168.10.0/24
+```
 
+### Makefile
+```makefile
+run:
+	yarn install
+	exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+
+deploy:
+	yarn install
+	yarn build
+	exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
 ```
