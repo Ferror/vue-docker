@@ -28,7 +28,7 @@ services:
         command: ["make", "run"]
         labels:
             - "traefik.enable=true"
-            - "traefik.http.routers.vue.rule=Host(`vue.malcherczyk.localhost`)"
+            - "traefik.http.routers.vue.rule=Host(`vue.domain.localhost`)"
         volumes:
             - ./:/app:delegated
         networks:
