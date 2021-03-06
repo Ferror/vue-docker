@@ -1,4 +1,5 @@
 # vue docker image
+![Docker Hub](https://badgen.net/docker/size/ferror/vue-image/latest)
 
 ## Example
 ### docker-compose.yml
