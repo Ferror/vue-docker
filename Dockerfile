@@ -5,7 +5,7 @@ ARG NODE_VERSION=14
 RUN apt-get update && apt-get install -y curl gnupg make nginx supervisor
 
 #Install Node
-RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash -
 
 #Install Yarn v1
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
