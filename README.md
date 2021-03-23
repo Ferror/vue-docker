@@ -1,5 +1,5 @@
 # vue docker image
-![Docker Hub](https://badgen.net/docker/size/ferror/vue-image/latest)
+![Docker Hub](https://badgen.net/docker/size/ferror/vue-image/14)
 
 ## Example
 ### docker-compose.yml
